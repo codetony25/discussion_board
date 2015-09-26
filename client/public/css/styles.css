@@ -1,0 +1,38 @@
+body {
+	margin-top: 70px;
+}
+
+.login {
+	width: 70%;
+	margin: 0 auto;
+}
+
+.login label {
+	display: block;
+	text-align: left;
+	padding: 3px;
+}
+
+.login button {
+	margin-top: 17px;
+}
+
+.topics {
+	margin-top: 10px;
+}
+
+.new-topic button {
+	margin-top: 17px;
+}
+
+.new-topic label {
+	padding: 3px;
+}
+
+.comments h5 a {
+	color: #23527C;
+}
+
+.usermessage {
+	margin-bottom: 20px;
+}

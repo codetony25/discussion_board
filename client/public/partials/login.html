@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h5 class="text-center">Hello! Log in to see or share your ideas!</h5>
+        </div>
+    </div>
+    <div class="login">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h5 class="panel-title">Login</h5>
+            </div>
+            <div class="panel-body text-center">
+                <label for="name">Name:</label>
+                <input type="text" id="name" class="form-control" ng-model="UserCtrl.newUser.name">
+                <label for="password">Password:</label>
+                <input type="password" id="password" class="form-control" ng-model="UserCtrl.newUser.password">
+                <button class="btn btn-info form-control" ng-click="UserCtrl.addUser(UserCtrl.newUser)">Login</button>
+            </div>
+        </div>
+    </div>
+</div>

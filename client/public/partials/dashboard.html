@@ -1,0 +1,44 @@
+<div class="container">
+	
+	<h1>Welcome {{ DashCtrl.username }}! </h1>
+	<div class="search">
+		<input type="text" class="form-control" ng-model="topic.topic" placeholder="Search Topic....">
+	</div>
+	<div class="topics">
+		<table class="table table-striped">
+			<tr>
+				<th>Category</th>
+				<th>Topic</th>
+				<th>User Name</th>
+				<th>Posts</th>
+			</tr>
+			<tr ng-repeat="topic in DashCtrl.topics | filter:topic.topic | orderBy: 'created_at'">
+				<td>{{ topic.category }}</td>
+				<td><a ng-href="#/topic/{{ topic._id }}">{{ topic.topic }}</a></td>
+				<td><a ng-href="#/profile/{{ topic.username }}">{{ topic.username }}</a></td>
+				<td>{{ topic.posts.length }}</td>
+			</tr>
+		</table>
+	</div>
+	<div class="new-topic">
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<h5 class="panel-title">Add a new Topic</h5>
+			</div>
+			<div class="panel-body">
+				<label for="topic">Topic: </label>
+				<input type="text" class="form-control" id="topic" ng-model="newTopic.topic">
+				<label for="description">Description: </label>
+				<textarea id="description" class="form-control" ng-model="newTopic.description"></textarea>
+				<label for="category">Language</label>
+				<select id="category" class="form-control" ng-model="newTopic.language">
+					<option>HTML</option>
+					<option>CSS</option>
+					<option>JavaScript</option>
+					<option>MEAN</option>
+				</select>
+				<button class="form-control btn btn-success" ng-click="DashCtrl.addTopic(newTopic)">Submit</button>
+			</div>
+		</div>
+	</div>
+</div>
